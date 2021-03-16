@@ -1,0 +1,268 @@
+
+#product-overview {
+    /* https://unsplash.com/photos/pHR_S0PeOF0?modal=%7B%22tag%22%3A%22CreditBadge%22%2C%22value%22%3A%7B%22userId%22%3A%226zYIzrUVqmk%22%7D%7D */
+    background: /*linear-gradient(to top, rgba(80,68,18, 0.6) 10%, transparent),*/ url("images/hands.jpg") center/ cover no-repeat border-box, #A6033F;
+    /*background-image: url("pink.jpg");*/
+    /*background-size: cover;*/ /* image always fill the container, ot can zoom the image to fill it*/
+    /*background-image: contain;*/ /* the full image is in the container but does not fill the container*/
+    /* background-position: center; center of the image is the center of the container */
+    /*background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: padding-box;*/
+    /*background-image: linear-gradient(30deg, blue, transparent);*/
+    /*background-image: radial-gradient(ellipse  farthest-corner 500px at top left, violet, white);*/
+    width: 100vw;
+    height: 40vh;
+    /* padding: 10px; */
+    margin-top: 0;
+    /* margin-top: 2.75rem; */
+    /*border: 5px dashed red;*/
+    position: relative; /* keep the parent in the document flow and not change the positon at all (this works to change position top, bottom... of the child element in order to this element, the parent) */
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Anton', sans-serif;
+    position: absolute; /* it is posible to take the element out of the document work flow and position it the way you whant */
+    bottom: 5%;
+    left: 3%;
+    /* width: 100%; */
+    font-size: 1.6rem;
+}
+
+/* @media (max-width: 40rem) {} to design from mobile to computer screens */
+
+@media (min-width: 40rem) and (min-height: 40rem)/*(orientation: portrait)*/ {
+    #product-overview {
+        height: 60vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+/* @media (min-width: 60rem) {
+    #product-overview {
+        height: 50vh;
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+        font-size: 5rem;
+    }
+} */
+
+.section-title {
+    color: #A6033F;
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+    font-size: 2rem;
+}
+
+/* center horizontally */
+
+
+.plan {
+    background: #e7a5a5;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    /* display: inline-block; */
+    /* width: 30%; */
+    width: 100%;
+    /* vertical-align: middle; */
+}
+
+.plan--highlighted {
+    background: #A6033F;
+    color: white;
+}
+
+.plan__annotation {
+    background: white;
+    color: #A6033F;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.plan__title {
+    color: rgb(100, 4, 39);
+}
+
+.plan__price {
+    color:#A6033F;
+}
+
+.plan--highlighted .plan__price {
+    color: #e7a5a5;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
+
+.plan__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.plan__feature {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 40rem)/*, (orientation: landscape)*/ {
+    .plan__list {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .plan {
+        width: 30%;
+        min-width: 13rem;
+        max-width: 25rem;
+        height: 28rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+
+    }
+    .plan--highlighted {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+        height: 30rem;
+        z-index: 50;
+    }
+}
+
+.plan__features li {
+    margin: 10px 0;
+}
+
+#key-features {
+    background: url('images/key-features.jpg') center / cover;
+    /* background: rgba(2, 89, 64, 0.5); */
+    width: 80%;
+    margin-top: 80px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+}
+
+/* intento de color sobre la imagen en el mismo background */
+#key-feautes::after {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: skew(15deg) translateX(-50%);;
+    background-image: linear-gradient(120deg,#eaee44,#33d0ff);
+    z-index: 0;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 32px;
+}
+
+.key-feature__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.key-feature__image {
+    background: rgba(255, 255, 255, 0.479);
+    width: 128px;
+    height: 128px;
+    border: 2px solid #5e4141;
+    border-radius: 50%;
+    margin: 1.5rem auto 0.5rem;
+    padding: 20px;
+}
+
+.key-feature__description {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+@media (min-width: 40rem) {
+    .key-feature {
+        width: 30%;
+        max-width: 25rem;
+    }
+
+    .key-feature__list {
+        display: flex;
+        justify-content: center;
+
+    }
+}
+
+/* h1 {
+    font-family: sans-serif;
+} */
+
+.modal {
+    position: fixed;
+    /* display: none; */
+    opacity: 0;
+    transform: translateY(-3rem);
+    transition: opacity 0.2s ease-out, transform 500ms cubic-bezier(0.5, 1, 0.89, 1);
+    z-index: 200;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal__title {
+    text-align: center;
+    margin: 0 0 1rem 0;
+  }
+  
+  .modal__actions {
+    text-align: center;
+  }
+  
+  .modal__action {
+    border: 1px solid #0e4f1f;
+    background: #0e4f1f;
+    text-decoration: none;
+    color: white;
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .modal__action:hover,
+  .modal__action:active {
+    background: #2ddf5c;
+    border-color: #2ddf5c;
+  }
+  
+  .modal__action--negative {
+    background: red;
+    border-color: red;
+  }
+  
+  .modal__action--negative:hover,
+  .modal__action--negative:active {
+    background: #A6033F;
+    border-color: #A6033F;
+  }
